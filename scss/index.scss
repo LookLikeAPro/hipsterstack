@@ -1,0 +1,102 @@
+@import "bootstrap/bootstrap/_variables.scss";
+@import "bootstrap/bootstrap/_mixins.scss";
+@import "bootstrap/bootstrap/_grid.scss";
+
+html {
+	font-size: 62.5%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+}
+
+$h1: 4rem;
+$h2: 3rem;
+$h3: 2rem;
+$h4: 1.5rem;
+$h5: 1rem;
+$h6: 0.5rem;
+
+h1 {
+	font-size: $h1;
+}
+
+h4 {
+	font-size: $h4;
+}
+
+h6 {
+	font-size: $h6;
+}
+
+body {
+	margin:0;
+	overflow-x: hidden;
+	background: rgb(241, 241, 241);
+}
+
+.body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	.filler {
+		order: 0;
+		flex: 0 1 auto;
+		flex-basis: 20%;
+		align-self: auto;
+	}
+	.content-container {
+		order: 0;
+		flex: 1 1 auto;
+		align-self: auto;
+	}
+}
+
+.header {
+	width: 100%;
+	height: 40px;
+	background: rgb(0, 151, 157);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	color: white;
+	.section-left, .section-middle, .section-right {
+		display:flex;
+		justify-content: center;
+		align-items:center;
+	}
+	.section-left {
+		order: 0;
+		flex: 0 1 auto;
+		align-self: auto;
+		&.logo {
+			font-size: $h3;
+		}
+	}
+	.section-middle {
+		order: 0;
+		flex: 1 1 auto;
+		align-self: auto;
+	}
+	.section-right {
+		order: 0;
+		flex: 0 1 auto;
+		align-self: auto;
+		&.button-size {
+			flex-basis: 100px;
+			font-size: $h4;
+		}
+	}
+}
+
+.panel {
+	width: 100%;
+	padding: 10px;
+	background: white;
+}
