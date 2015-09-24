@@ -1,14 +1,6 @@
-@import "bootstrap/bootstrap/_variables.scss";
-@import "bootstrap/bootstrap/_mixins.scss";
-@import "bootstrap/bootstrap/_grid.scss";
-
-html {
-	font-size: 62.5%;
-	font-family: 'Open Sans', sans-serif;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-}
+// @import "bootstrap/bootstrap/_variables.scss";
+// @import "bootstrap/bootstrap/_mixins.scss";
+// @import "bootstrap/bootstrap/_grid.scss";
 
 $h1: 4rem;
 $h2: 3rem;
@@ -17,17 +9,10 @@ $h4: 1.5rem;
 $h5: 1rem;
 $h6: 0.5rem;
 
-h1 {
-	font-size: $h1;
-}
+@import "components/_grid.scss";
+@import "components/_topBar.scss";
 
-h4 {
-	font-size: $h4;
-}
-
-h6 {
-	font-size: $h6;
-}
+@import "branding/_typography.scss";
 
 body {
 	margin:0;
@@ -35,57 +20,14 @@ body {
 	background: rgb(241, 241, 241);
 }
 
-.header {
-	width: 100%;
-	height: 40px;
-	background: rgb(0, 151, 157);
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-content: stretch;
-	align-items: stretch;
-	color: white;
-	.section-left, .section-middle, .section-right {
-		display:flex;
-		justify-content: center;
-		align-items:center;
-	}
-	.section-left {
-		order: 0;
-		flex: 0 1 auto;
-		align-self: auto;
-		&.logo {
-			font-size: $h3;
-		}
-	}
-	.section-middle {
-		order: 0;
-		flex: 1 1 auto;
-		align-self: auto;
-	}
-	.section-right {
-		order: 0;
-		flex: 0 1 auto;
-		align-self: auto;
-		&.button-size {
-			flex-basis: 100px;
-			font-size: $h4;
-		}
-	}
-}
+
 
 .panel {
-	width: 100%;
+	width: auto;
 	padding: 10px;
 	background: white;
 	margin: 10px;
 }
 
-.row {
-	margin: 0;
-}
 
-.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
-	padding: 0;
-}
+

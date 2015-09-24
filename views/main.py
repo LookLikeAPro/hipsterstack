@@ -3,7 +3,7 @@ from django.views.generic import View
 from django.template import RequestContext, loader
 from django.shortcuts import render
 
-from services.generator import generator
+from services.generator import randomize
 
 class main(View):
 	def get(self, request, *args, **kwargs):
@@ -12,7 +12,7 @@ class main(View):
 		return HttpResponse(template.render(context))
 	def post(self, request, *args, **kwargs):
 		template = loader.get_template('main.html')
-		context = RequestContext(request, {"result": generator.randomize()})
+		context = RequestContext(request, {"result": randomize()})
 		return HttpResponse(template.render(context))
 		# def get(self, request, *args, **kwargs):
 		#     return HttpResponse("Hello, World")
