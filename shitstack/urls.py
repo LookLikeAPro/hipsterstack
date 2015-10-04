@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
-# from views.main import main
-from app.views.main import main
+from app import views
 
 urlpatterns = [
-	url(r'^main/', main.as_view()),
-	url(r'^', main.as_view())
+	url(r'^main/', views.main.as_view()),
+	url(r'^questionnaire/', views.questionnaire.as_view()),
+	url(r'^', views.main.as_view())
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

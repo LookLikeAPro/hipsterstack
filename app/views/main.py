@@ -9,10 +9,11 @@ class main(View):
 	def get(self, request, *args, **kwargs):
 		template = loader.get_template('main.html')
 		context = RequestContext(request, {})
+		request.session[0] = 'bar'
 		return HttpResponse(template.render(context))
 	def post(self, request, *args, **kwargs):
 		template = loader.get_template('main.html')
-		context = RequestContext(request, {"result": randomize()})
+		context = RequestContext(request, {"result": request.session['0']})
 		return HttpResponse(template.render(context))
 		# def get(self, request, *args, **kwargs):
 		#     return HttpResponse("Hello, World")

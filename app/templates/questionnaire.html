@@ -1,0 +1,21 @@
+{% extends 'wrapper.html' %} 
+{% block 'body' %}
+
+<div class="panel">
+	<h1>Question 1</h1>
+	<h4>Helping you choose a shitty webstack for your next shitty project, so you can write more shitcode.</h4>
+</div>
+<div class="panel">
+	<h4>{{question}}</h4>
+	<form method="POST" action=".">
+		{% csrf_token %}
+		<button type="submit" value="Submit">Generate</button>
+	</form>
+</div>
+{% if result %}
+	<div class="panel">
+		<p>RESULT</p>
+		{{result}}
+	</div>
+{% endif %}
+{% endblock %}
